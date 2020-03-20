@@ -5,7 +5,7 @@ layout: post
 
 ![Cloudflare](https://www.bleepstatic.com/content/hl-images/2019/09/29/cloudflare-new-logo.jpg)
 
-## What if Cloudflare?
+## What is Cloudflare?
 Cloudflare is a CDN which acts as a middle layer between your actual hosting provider and the user browsing your website. Cloudflare has datacenter over 200 location where they can serve webpages from these edge locations.
 
 ## Why should we use Cloudflare
