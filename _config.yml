@@ -1,5 +1,5 @@
 title: "Blog Title"
-description: "Follow me on <b style=\"color: #f45;\">&lt;3</b> by <b><a href=\"https://twitter.com/_roshan_shetty\">@Twitter</a></b>"
+description: "Follow me on <b><a href=\"https://twitter.com/_roshan_shetty\">@Twitter</a></b>"
 author: "Blog Author"
 permalink: /:title/
 lang: "en"
