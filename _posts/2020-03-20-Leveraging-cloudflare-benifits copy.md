@@ -8,7 +8,7 @@ layout: post
 ## What is Cloudflare?
 Cloudflare is a CDN which acts as a middle layer between your actual hosting provider and the user browsing your website. Cloudflare has datacenter over 200 location where they can serve webpages from these edge locations.
 
-## Why should we use Cloudflare
+## Why should we use Cloudflare?   
 
 # Free and easy to setup:
 
@@ -26,7 +26,7 @@ ISP’s can always snoop on your traffic and send ads based on your internet usa
 ## Security
 
 - When proxy enabled, Cloudflare can mask your actual server IP addresses. So it’s difficult for hackers to attack the servers.
-- Cloudflare offers free SSL, multiple TLS encryption mode is available
+- Cloudflare offers free SSL, multiple TLS encryption modes are available
 ![TLS-Encryption](https://docs.bitnami.com/images/img/platforms/common/cloudflare-SSL.png)
 - Cloudflare supports HTTPS redirection, HTTP Strict Transport Security (HSTS)
  and minimum TLS version enforcement so SRE’s no need to worry about this on a server level.
@@ -47,7 +47,7 @@ Cloudflare provides deeper insights into incoming traffic. Default graphs includ
 
 ## Cheapest Domain Registrar
 
-Cloudflare recently announced that they will be [selling domain](https://blog.cloudflare.com/cloudflare-registrar/) at a wholesale price each TLD charges. Although currently domain transfer from other registrars to Cloudflare is supported. Directly buying a domain from Cloudflare is not yet supported. However, not all the TLD’s are supported yet. Please check [this](https://www.cloudflare.com/tld-policies/) supported TLD’s
+Cloudflare recently announced that they will be [selling domains](https://blog.cloudflare.com/cloudflare-registrar/) at a wholesale price each TLD charges. Although currently domain transfer from other registrars to Cloudflare is supported. Directly buying a domain from Cloudflare is not yet supported. [Here's](https://www.cloudflare.com/tld-policies/) the list of TLD's supported for transfers.
 
 
 
