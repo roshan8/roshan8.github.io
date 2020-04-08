@@ -1,15 +1,16 @@
 ## Scope
-- This readiness review is scoped at the moving our companies infra from AWS to GCP.
-- Since we only use EC2, ASG, LB, and ECR, We are not tied to AWS. So explore ways to improve the performance and reliability while keeping cost in check. 
-
+- This readiness review is scoped at moving our companies infra from AWS to GCP.
+- Since we only use EC2, ASG, LB, and ECR, We are not vendor locked to AWS. and all our services are cloud native. So explore ways to improve the performance and reliability while keeping cost in check. 
+---
 ## Why GCP?
+
 ### Reliability and performance
 - GCP offers a low-latency 10Gbps interconnect across the board.
 - GCP offers a global Anycast network as part of its load balancing service.
 - GCP also has a track record of exceeding its uptime SLAs for compute VMs.
 ### Google Kubernetes Engine
-- We hate having something in prod which we don’t have complete expertise on. Even though KOPS is stable, it’s still a dark horse.
-- GKE spin uptime is very less (<5 min)
+- We hate having something in prod which we don’t have complete expertise on. Even though KOPS is stable, it’s still a dark horse. 
+- GKE spin-up time is very less (<5 min)
 - Easy to manage RBAC in GKE.
 - One zonal k8 cluster is a free per user account 
 ### Pricing
@@ -21,15 +22,15 @@
 - Anthos: Services like Anthos can be leveraged to build a multi-cloud strategy for our product.
 - NodeGrouping feature while doing major upgrades/region migration
 ### Observability
-- StackDriver is one of the best, Plugging StackDriver to GKE is pretty straight forward. And it can monitor and alert for node, service, namespace related checks
+- StackDriver is one of the best tool to improve the Observability in the Microservices, Plugging StackDriver to GKE is pretty straight forward. And it can monitor and alert for node, service, namespace related checks
 - We can push logs to stackdriver itself.
 - Integrating Prometheus with StackDriver is also supported.
 ### Having multiple environments for devs to test their feature on.
 - GKE provides abstraction, Ops Engineer would be handling namespace rather than dealing with nodes. So If devs want to test their feature on staging then it’s easy to spin up new namespace for their feature branch
 ### Security and Maintenance effort:
-- Since GKE is managed service, no need to worry about upgrading the Kubernetes control plane.
+- Since GKE is a managed service, Engineer no need to worry about upgrading the Kubernetes control plane.
 - Google patches security vulnerabilities of the K8 control plane as well as node very often.
-
+---
 ## Why not GCP?
 - GCP has a very limited number of services but offerings are relatively tamer, focused more on IaaS & PaaS services.
 - We don’t have full control over GKE, If we want to integrate some security tool then it will be difficult/impossible
