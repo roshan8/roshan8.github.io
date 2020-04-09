@@ -2,6 +2,8 @@
 Recently we had a requirement to migrate repos from one github organization to another. Since we had 100+ projects, manual migration would have taken some considerable amount of time. So we decided to automate the repos migration with some good old shell scripts!
 
 ---
+### Creating github token 
+Open github [settings](https://github.com/settings/tokens) and create a new token. Your personal token will have access to your Org as well as personal projects. 
 
 ### Clone all the repo's in your current Github Org.
 ```sh
@@ -11,7 +13,7 @@ curl -sS -H "Authorization: token yourgithubtokenFromPresentOrg" https://api.git
 	do git clone "https://${svn_url##*://}"; done
 ``` 
 
-### Create an empty projects on your new Github Org
+### Create an empty projects on your new Github Org 
 ```sh
 for d in ./*; do
   curl -sS -H "Authorization: token yourgithubtokenFromNewOrg" -X POST https://api.github.com/orgs/yourNewOrgName/repos \
@@ -19,7 +21,7 @@ for d in ./*; do
 done;
 ``` 
 
-### Change the remote git origin to new Org and push all the repos cloned from previous org
+### Change the remote git origin to new Org and push all the repos cloned from previous org 
 ```sh
 for d in ./*; do
   if [ -d "${d}" ]; then
