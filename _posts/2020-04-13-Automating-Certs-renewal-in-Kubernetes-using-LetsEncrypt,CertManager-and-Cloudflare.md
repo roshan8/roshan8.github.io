@@ -37,8 +37,9 @@ data:
   cloudflare-api-key: EnterBase64StringFromPreviousStep
 
 ```
-Create file `prod-cluster-issuer.yaml`
-	```sh
+Create file `prod-cluster-issuer.yaml` 
+
+```sh
 ---
 apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
@@ -60,9 +61,11 @@ spec:
           apiKeySecretRef:
             name: cloudflare-api-key-secret
             key: cloudflare-api-key
-``` 
-Create `prod-cluster-certificate.yaml`
-	```sh
+```  
+
+Create `prod-cluster-certificate.yaml` 
+
+```sh
 apiVersion: cert-manager.io/v1alpha2
 kind: Certificate
 metadata:
@@ -78,8 +81,9 @@ spec:
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-```
-Let’s create a sample nginx-ingress file. (expose.yaml)
+``` 
+
+Let’s create a sample nginx-ingress file. (expose.yaml) 
 ```sh
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -111,12 +115,15 @@ spec:
     - secretName: example-prod-gateway-tls
       hosts:
         - test.example.com
-        - trial.example.com
+        - trial.example.com 
+        
+``` 
+kubectl create -f expose.yaml 
 
-```
-kubectl create -f expose.yaml
-kubectl create -f create-secret.yaml
-kubectl create -f prod-cluster-issuer.yaml
+kubectl create -f create-secret.yaml 
+
+kubectl create -f prod-cluster-issuer.yaml 
+
 kubectl create -f prod-cluster-certificate.yaml
 
 Cert-manager should be able to get new certificates from Lets-Encrypt within 2 mins.
