@@ -118,12 +118,11 @@ spec:
         - trial.example.com 
         
 ``` 
-kubectl create -f expose.yaml 
-
+```sh
+kubectl create -f expose.yaml
 kubectl create -f create-secret.yaml 
-
 kubectl create -f prod-cluster-issuer.yaml 
-
 kubectl create -f prod-cluster-certificate.yaml
+``` 
 
 Cert-manager should be able to get new certificates from Lets-Encrypt within 2 mins.
