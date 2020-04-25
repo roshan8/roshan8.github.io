@@ -2,7 +2,7 @@
 <p> Let's Encrypt is a non-profit certificate authority run by Internet Security Research Group (ISRG) that provides X.509 certificates for Transport Layer Security (TLS) encryption at `no charge`. The certificate is `valid for 90 days`, during which renewal can take place at any time. </p> 
 
 ### What’s Cert-Manager? 
-<p>[cert-manager](https://github.com/jetstack/cert-manager) is a Kubernetes add-on to automate the management and issuance of TLS certificates from various issuing sources(Lets-Encrypt is one of these sources). It will ensure certificates are valid and up to date periodically, and attempt to renew certificates at an appropriate time before expiry. Cert-manager is based on [kube-lego](https://github.com/jetstack/kube-lego) </p> 
+<p> [cert-manager](https://github.com/jetstack/cert-manager) is a Kubernetes add-on to automate the management and issuance of TLS certificates from various issuing sources(Lets-Encrypt is one of these sources). It will ensure certificates are valid and up to date periodically, and attempt to renew certificates at an appropriate time before expiry. Cert-manager is based on [kube-lego](https://github.com/jetstack/kube-lego) </p> 
 
 ### Why did we choose `DNS as challenge type` for Let’s Encrypt
 <p> Let’s Encrypt supports various types of [challenges types](https://letsencrypt.org/docs/challenge-types/), We chose to use DNS-01 challenge instead of more popular HTTP-01 challenge for the following reasons
@@ -125,4 +125,9 @@ kubectl create -f prod-cluster-issuer.yaml
 kubectl create -f prod-cluster-certificate.yaml
 ``` 
 
-Cert-manager should be able to get new certificates from Lets-Encrypt within 2 mins.
+Cert-manager should be able to get new certificates from Lets-Encrypt within 2 mins!
+
+
+### Troubleshooting
+- If you run into any issue, please follow this troubleshooting [guide](https://docs.cert-manager.io/en/release-0.10/getting-started/troubleshooting.html)
+- If above article doesn't help then you can create an issue in [github](https://github.com/jetstack/cert-manager/issues)
