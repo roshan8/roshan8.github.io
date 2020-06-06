@@ -3,7 +3,7 @@ Many folks might be using same laptop while working on work and hobby projects. 
 
 In those cases, we can make use of [conditional includes](https://git-scm.com/docs/git-config#_conditional_includes) of git and it's supported from git 2.13 onwards.
 
-Gobal git config:
+<i> Gobal git config: </i>
 ```sh
 [user]
     name = John Doe
