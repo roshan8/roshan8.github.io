@@ -35,7 +35,7 @@ This error budget tracker seeks to provide a simple and effective way to keep tr
 - Now set up rules to monitor SLI's in your monitoring tool 
   (Let's see how this can be done in Prometheus)
 
-Alert manager rule to monitor an example SLI ==> Nginx p99 latency is higher than 3 seconds      
+Alert manager rule to monitor an example SLI ==> `Nginx p99 latency`      
 
 ```sh
   - alert: NginxLatencyHigh
@@ -76,4 +76,4 @@ Alert routing based on tags set in checks
 - Create more dashboards for analytics
 - Better visualization tools to pinpoint problematic services
 
-If you like to see the dashboard then please check (this)[http://35.232.125.243:3000/] out!
+** If you like to see the dashboard then please check [this](http://35.232.125.243:3000/) out!  **
