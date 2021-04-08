@@ -46,10 +46,10 @@ Alert manager rule to monitor an example SLI ==> Nginx p99 latency is higher tha
     annotations:
       summary: Nginx latency high (instance {{ $labels.instance }})
       description: Nginx p99 latency is higher than 3 seconds\n  VALUE = {{ $value }}\n  LABELS: {{ $labels }}
-```
+```   
 
+Alert routing based on tags set in checks                 
 ```sh
-Alert routing based on tags set in checks
           global:
             resolve_timeout: 10m
           route:
