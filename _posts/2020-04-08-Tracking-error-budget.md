@@ -34,7 +34,8 @@ SLO-tracker is a simple but effective way to track error budgets.
   - For Newrelic: serverip:8080/webhook/newrelic
   - For Pingdom: serverip:8080/webhook/pingdom
 - Now set up rules in your monitoring tool (For eg: Prometheus)
-Alert manager rule to monitor an example SLI: Nginx p99 latency is higher than 3 seconds
+Alert manager rule to monitor an example SLI: Nginx p99 latency is higher than 3 seconds 
+
 ```sh
   - alert: NginxLatencyHigh
     expr: histogram_quantile(0.99, sum(rate(nginx_http_request_duration_seconds_bucket[2m])) by (host, node)) > 3
