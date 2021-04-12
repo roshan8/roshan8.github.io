@@ -1,10 +1,14 @@
 
 <p> Most organizations today track their product SLO’s to avoid being liable for breach of SLAs (Service level agreements). In case any SLO violation, they will be under obligation to pay something in return for breach of contract. Once the SLO for their product has been defined, A corresponding error budget will be calculated based on that number. For example, If 99.99% is the SLO, then the error budget will be 52.56 mins in a year. That’s the amount of downtime that the product may have in a year without breaching the SLO.</p>   
 
-<p>Once companies agree on the SLO, they need to pick the most relevant [SLI’s](https://www.blameless.com/blog/sli-slo-sla)(service level indicators). Any violation of these SLI’s will be considered as downtime and the duration of downtime will be deducted from the error budget. For example, a payment gateway product might have the following SLI’s.</p>
+<p>Once companies agree on the SLO, they need to pick the most relevant SLI’s(service level indicators). Any violation of these SLI’s will be considered as downtime and the duration of downtime will be deducted from the error budget. For example, a payment gateway product might have the following SLI’s.</p>
 - Latency on p95 for requests
 - ErrorRates
-- Payment failures etc
+- Payment failures etc   
+
+Additonal reading:    
+https://sre.google/workbook/implementing-slos/   
+https://sre.google/workbook/error-budget-policy/   
 
 
 ### Why is it challenging for many companies to track error budgets at the moment?
