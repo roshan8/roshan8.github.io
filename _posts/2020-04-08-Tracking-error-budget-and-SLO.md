@@ -6,7 +6,7 @@
 - ErrorRates
 - Payment failures etc   
 
-Additonal reading:    
+**Additional reading:**    
 https://sre.google/workbook/implementing-slos/   
 https://sre.google/workbook/error-budget-policy/   
 
