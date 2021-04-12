@@ -76,7 +76,7 @@ Alert routing based on tags set in checks
 - Create more dashboards for analytics
 - Better visualization tools to pinpoint problematic services
 
-**If you like to see the dashboard then please check [this](http://35.232.125.243:3000/) out!**
+**If you like to see the dashboard then please check [this](http://35.232.125.243:3000/) out!**   
 (`admin:admin` is the creds. Also please use laptop to open this webapp. It's not yet mobile-friendly)
 
 [This](https://github.com/roshan8/slo-tracker) project is open-source. Feel free to open a PR or raise issue :)
