@@ -2,13 +2,13 @@
 
 ### Here's my problem!
 I have 20 different API endpoint, and each endpoint does it's own thing.
-Let's say we have a struct for each of them and a `decoder` function to read the body whenever a request comes in. and this `decoder` function is common for every API endpoint. So we can have this `decoder` function in app middleware package
+Let's say we have a struct for each of them and a `decoder` function to read the body whenever a request comes in. and this `decoder` function is common for every API endpoint. So we decided have this `decoder` function in app middleware package.
 
 Now, I have request payload validator methods defined for each of these struct which does it's own thing.
 I would like to trigger these validator functions from middleware `decoder` function itself.
 
 Here's the thing though:
-I don't know the type of these structs since were assigned to empty interface in `decoder` function, But i still like to call these `struct specific` validator function from decoder itself.
+I don't know the type of these structs since `decoder` function was accepting an empty interface in `decoder` function, But i still like to call these `struct specific` validator function from decoder(`common function`) itself.
 
 *Enter: Type casting of empty interface to structs*
 
